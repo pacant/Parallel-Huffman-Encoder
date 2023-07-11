@@ -31,8 +31,6 @@ io_sequential_time = []
 for file in files:
     print("Executing sequential on file " + file)
     # Sequenziale
-    step_times = {'Reading': [], 'Counting': [],
-                  'Building': [], 'Encoding': [], 'Translating': [], 'Writing': []}
     run_times = []
     io_run_times = []
     for _ in range(num_runs):
