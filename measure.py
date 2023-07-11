@@ -12,9 +12,10 @@ parser = argparse.ArgumentParser()
 parser.add_argument('-ssh', help='SSH remote host')
 parser.add_argument('files', nargs='+', help='Input files')
 args = parser.parse_args()
-
 files = args.files
-ssh = args.ssh
+remote_host = args.ssh
+if remote_host is not None:
+    ssh = 1
 
 num_threads_list = [1, 2, 4, 8, 16, 32, 64]
 
